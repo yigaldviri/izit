@@ -114,9 +114,13 @@
     display: inline-block;
 }
 
+.min-dig{
+    min-width: 90px;
+}
+
 .digits-wrapper {
     background: #004d40;
-    padding: 10px
+    padding: 10px;
 }
 
 .digits-overtime {
@@ -182,7 +186,7 @@
     letter-spacing: -.02em;
 }
 
-#about > div{
+#about > .content{
     margin-top: 25px;
 }
 
@@ -190,18 +194,16 @@
     font-weight: bold;
 }
 
-#about > div .nick {
-    font-style: italic;
-    font-size: 16px;
-}
-
 #about > div .name-and-nick {
     color: #004d40;
     cursor: pointer;
     text-decoration: none;
+    text-align: left;
+    padding-left: 10px;
 }
 
 #about > .now-what{
+    margin-top: 50px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -215,6 +217,21 @@
 #about > div .now > a {
     text-decoration: none;
     color: #004d40;
+}
+
+.about-member {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin-top: 15px;
+}
+
+.about-member-content{
+    margin-left: 58px;
+}
+
+.about-avatar{
+    margin-right: 5px;
 }
 
 .sharing{
@@ -287,6 +304,10 @@
     }
 
     .is-ticking {
-        font-size: 15vw;
+        font-size: 11vw;
+    }
+
+    .min-dig{
+        min-width: 28px;
     }
 }

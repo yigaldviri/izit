@@ -7,7 +7,7 @@ import {IzitState} from './IzitStates';
 const Digit = ({digit, isOverTime}) => {
     return (
         <div className="digits-wrapper">
-            <span className={isOverTime ? 'digits-overtime' : '' }>{digit}</span>
+            <span className="min-dig {isOverTime ? 'digits-overtime' : '' }">{digit}</span>
         </div>
     )};
 

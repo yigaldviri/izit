@@ -3,6 +3,7 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {injectIntl, FormattedMessage} from 'react-intl';
+import DocumentMeta from 'react-document-meta';
 
 import {izitMuiTheme} from './themeProvider'
 import IzitLoader from './IzitLoader';
@@ -68,8 +69,15 @@ class Izit extends React.Component {
         if (this.state.loading){
             return (<IzitLoader/>);
         }
+
+        const meta = {
+            description: document.location.href,
+        };
+
+
         return(
             <div className="context-wrapper izit-screen">
+                <DocumentMeta {...meta} extend/>
                 <div className="what">{this.state.izit.what}</div>
                 {/*<div className="what">iZit should go online</div>*/}
 

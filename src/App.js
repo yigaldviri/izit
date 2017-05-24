@@ -11,6 +11,7 @@ import IzItForm from './components/IzItForm';
 import Izit from './components/Izit';
 import About from './components/About';
 import Nowhere from './components/Nowhere';
+import DocumentMeta from 'react-document-meta';
 
 const reducer = combineReducers({
     form: reduxFormReducer // mounted under "form"
@@ -45,14 +46,28 @@ class App extends Component {
     }
 
     render() {
+
+        const meta = {
+            title: 'iZit.io',
+            description: 'aaaahhhhhhmmmm',
+            canonical: 'www.iZit.io',
+            meta: {
+                charset: 'utf-8',
+                name: {
+                    keywords: 'izit,izit.io,rivi'
+                }
+            }
+        };
+
         return (
             <div className="App">
+                <DocumentMeta {...meta} />
                 <div className="App-content">
                     <div className="App-header">
                         <div>
                             {<img src={logo} className="Izit-title" onClick={() => this.goTo("/")} alt="iZit.io"/>}
                         </div>
-                        <div className="Izit-description">Countdown. As a Service</div>
+                        <div className="Izit-description">It's the final countdown. Ti di di di. Ti di di di di.</div>
                     </div>
                     <Router history={browserHistory}>
                         <Route path="/" component={Design} onError={this.handleError.bind(this)}/>
@@ -63,7 +78,7 @@ class App extends Component {
                     <ErrorPanel error={this.state.error}/>
                 </div>
                 <div className="sharing">
-                    <div className="sharethis-inline-share-buttons"></div>
+                    <div> todo share</div>
                 </div>
                 <div className="footer">
                     <div onClick={() => this.goTo("/ext/about")}>© 2017 iZit.io | About</div>

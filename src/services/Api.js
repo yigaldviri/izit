@@ -20,7 +20,12 @@ export const createIzit = inputs => {
     let appointmentMoment = getFixedDate(inputs.whenH, inputs.whenD);
     return axios.post(
         BASE_URL+"/isit",
-        {what: inputs.what, when: appointmentMoment.valueOf(), youtube: inputs.youtube}
+        {
+            what: inputs.what,
+            when: appointmentMoment.valueOf(),
+            youtube: inputs.youtube,
+            email: inputs.email,
+            link: inputs.link}
     );
 };
 
