@@ -26,7 +26,10 @@ export const en = {
     statePhrase1: "Done, but overtime.",
     statePhrase2: "Time is running",
     statePhrase3: "Failed",
-    "Network Error": "Ammm. Seems like a network issue."
+    "Network Error": "Ammm. Seems like a network issue.",
+    "error.what_contains_xss":"No way Jose",
+    "error.invalid_email":"Invalid email address",
+    "error.field_required":"Come on, fill the damn field"
 };
 
 
@@ -58,5 +61,8 @@ export const he = {
     statePhrase1: "בוצע לא בזמן",
     statePhrase2: "הזמן רץ",
     statePhrase3: "עבר הזמן",
-    "Network Error": "בעיה ברשת. כפרה, אין לך אינטרנט או משהו כזה"
+    "Network Error": "בעיה ברשת. כפרה, אין לך אינטרנט או משהו כזה",
+    "error.what_contains_xss":"כן בטח. יאללה סע",
+    "error.invalid_email":"יש בעיה עם האימייל הזה",
+    "error.field_required":"חובה למלא את השדה הזה"
 };

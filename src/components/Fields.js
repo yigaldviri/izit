@@ -6,31 +6,48 @@ import TextField from 'material-ui/TextField'
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form'
 import {izitMuiTheme} from './themeProvider';
+import {FormattedMessage} from 'react-intl';
+
+const ErrorMessage = ({error}) => {
+  if(!error){
+      return null;
+  }
+    return (
+        <div>
+           <FormattedMessage id={error}/>
+        </div>
+    )
+};
 
 export const renderTimeField = ({ input, label, meta: { touched, error }, ...custom }) => (
     <MuiThemeProvider muiTheme={izitMuiTheme}>
         <TimePicker hintText={label}
                     floatingLabelText={label}
-                    errorText={touched && error}
+                    errorText={touched && error && <ErrorMessage error={error}/>}
                     onChange={(event, value) => {
                         input.onChange(value)
                     }}
                     {...custom}
+                    format="24hr"
                     autoOk={true}
                     fullWidth={true}/>
     </MuiThemeProvider>
 );
 
 
-
 export const renderDateField = ({ input, label, meta: { touched, error }, ...custom }) => (
     <MuiThemeProvider muiTheme={izitMuiTheme}>
         <DatePicker hintText={label}
                     floatingLabelText={label}
-                    errorText={touched && error}
+                    errorText={touched && error && <ErrorMessage error={error}/>}
                     onChange={(event, value) => {
                         input.onChange(value)
                     }}
+                    formatDate={new Intl.DateTimeFormat('en-US', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric',
+                    }).format}
                     {...custom}
                     autoOk={true}
                     fullWidth={true}/>
@@ -42,7 +59,7 @@ export const renderTextField = ({ input, label, meta: { touched, error }, ...cus
     <MuiThemeProvider muiTheme={izitMuiTheme}>
         <TextField hintText={label}
                    floatingLabelText={label}
-                   errorText={touched && error}
+                   errorText={touched && error && <ErrorMessage error={error}/>}
                    {...input}
                    {...custom}
                    fullWidth={true}/>

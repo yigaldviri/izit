@@ -16,14 +16,14 @@ const validate = values => {
     const requiredFields = [];//['what', 'email', 'whenH', 'whenD'];
     requiredFields.forEach(field => {
         if (!values[ field ]) {
-            errors[ field ] = 'Come on, fill the damn field';
+            errors[ field ] = 'error.field_required';
         }
     });
     if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-        errors.email = 'Invalid email address';
+        errors.email = 'error.invalid_email';
     }
     if (values.what && /([<>\/\\])/i.test(values.what)) {
-        errors.what = 'No way Jose';
+        errors.what = 'error.what_contains_xss';
     }
     return errors
 };
@@ -34,10 +34,9 @@ class IzItForm extends Component {
         super(props);
         this.state = {loading: false};
         this.format = props.intl.formatMessage;
-        this.dir = (this.props.intl.locale === "en-IL" || this.props.intl.locale === "he-IL") ? 'rtl' : 'ltr';
+        this.locale = this.props.intl.locale;
+        this.dir = (this.locale === "en-IL" || this.locale === "he-IL") ? 'rtl' : 'ltr';
     }
-
-    //getInitialState()
 
     create = (inputs) => {
         this.setState({loading: true});
@@ -55,9 +54,7 @@ class IzItForm extends Component {
 
 
     render() {
-
         return (
-
             <div className="context-wrapper">
                 <p className="App-intro">
                     <FormattedMessage id="description"/>
