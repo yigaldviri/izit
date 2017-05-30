@@ -236,6 +236,12 @@
 
 .sharing{
     margin: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.share-item {
+    display: inline-block;
 }
 
 .footer{

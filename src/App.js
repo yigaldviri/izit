@@ -4,6 +4,7 @@ import { reducer as reduxFormReducer } from 'redux-form'
 import { createStore, combineReducers } from 'redux';
 import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router'
 import {FormattedMessage} from 'react-intl';
+import DocumentMeta from 'react-document-meta';
 
 import './App.css';
 import logo from './resources/logo.png'
@@ -11,7 +12,6 @@ import IzItForm from './components/IzItForm';
 import Izit from './components/Izit';
 import About from './components/About';
 import Nowhere from './components/Nowhere';
-import DocumentMeta from 'react-document-meta';
 
 const reducer = combineReducers({
     form: reduxFormReducer // mounted under "form"
@@ -49,13 +49,28 @@ class App extends Component {
 
         const meta = {
             title: 'iZit.io',
-            description: 'aaaahhhhhhmmmm',
-            canonical: 'www.iZit.io',
+            description: document.location.href,
             meta: {
                 charset: 'utf-8',
                 name: {
                     keywords: 'izit,izit.io,rivi'
+                },
+                itemProp: {
+                    name: 'izit.io',
+                    description: document.location.href,
+                    image: 'https://github.com/yigaldviri/izit/blob/master/src/resources/logo-full-small.jpg'
+                },
+                property: {
+                    'og:title': 'iZit.io',
+                    'og:url': document.location.href,
+                    'og:type': 'article',
+                    'og:image': 'https://github.com/yigaldviri/izit/blob/master/src/resources/logo-full-small.jpg',
+                    'og:site_name': 'iZit.io',
+                    'twitter:title': 'I am a Twitter title'
                 }
+            },
+            auto: {
+                ograph: true
             }
         };
 
@@ -76,9 +91,6 @@ class App extends Component {
                         <Route path="*" component={NotFound} />
                     </Router>
                     <ErrorPanel error={this.state.error}/>
-                </div>
-                <div className="sharing">
-                    <div> todo share</div>
                 </div>
                 <div className="footer">
                     <div onClick={() => this.goTo("/ext/about")}>© 2017 iZit.io | About</div>

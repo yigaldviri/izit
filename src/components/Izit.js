@@ -10,6 +10,7 @@ import IzitLoader from './IzitLoader';
 import IzitTimer from './IzitTimer';
 import {getIzit} from '../services/Api';
 import {getTimerState, getTimeRemaining} from './IzitStates';
+import Sharing from './Sharing';
 
 
 const Phrase = ({izitState}) => {
@@ -103,11 +104,18 @@ class Izit extends React.Component {
                         href="/">
                     </RaisedButton>
                 </MuiThemeProvider>
+
+                <Sharing loc={this.context.router.location}/>
+
             </div>
 
         )
     }
-
 }
+
+Izit.contextTypes = {
+    router: React.PropTypes.object,
+    location: React.PropTypes.object
+};
 
 export default injectIntl(Izit);
