@@ -244,6 +244,44 @@
     display: inline-block;
 }
 
+.preview{
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #004d40;
+    border-radius: 5px
+}
+
+.preview .prev-image{
+    width: 80px;
+    height: 50px;
+    padding: 5px;
+
+}
+
+.preview .prev-data{
+    display: inline-block;
+    text-align: left;
+    padding: 5px;
+    width: 300px;
+}
+
+.preview .title{
+    color: #004d40;
+    font-size: 1.5vw;
+    display: inline-block;
+    padding: 5px;
+}
+
+.preview .description{
+    font-size: 1vw;
+    display: block;
+    padding: 5px;
+    text-align: justify;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .footer{
     font-family: open-sans-heb-light;
     text-align: center;

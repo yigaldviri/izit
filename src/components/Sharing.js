@@ -18,11 +18,6 @@ const WhatsappIcon = generateShareIcon('whatsapp');
 
 class Sharing extends React.Component {
 
-    constructor(props) {
-        super(props);
-        console.log(this.currentLoc());
-    }
-
     currentLoc = () => BASE_URL + this.props.loc.pathname;
 
     render () {

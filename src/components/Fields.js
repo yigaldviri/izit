@@ -3,10 +3,10 @@ import TimePicker from 'material-ui/TimePicker';
 import DatePicker from 'material-ui/DatePicker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField'
-import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Field} from 'redux-form'
 import {izitMuiTheme} from './themeProvider';
 import {FormattedMessage} from 'react-intl';
+
 
 const ErrorMessage = ({error}) => {
   if(!error){
@@ -67,28 +67,3 @@ export const renderTextField = ({ input, label, meta: { touched, error }, ...cus
 );
 
 
-export const OptionalCard = (props) => {
-
-    const {formatMessage} = props;
-
-    return (
-        <div className="optional-list">
-            <MuiThemeProvider>
-                <Card>
-                    <CardHeader
-                        title={formatMessage({id:"toggle"})}
-                        subtitle={formatMessage({id:"toggleSub"})}
-                        actAsExpander={true}
-                        showExpandableButton={true}
-                        titleStyle={{paddingLeft : 90}} //hack! yack!
-                        subtitleStyle={{paddingLeft : 90, marginTop: 10}} //hack! yack!
-                    />
-                    <CardText expandable={true}>
-                        <Field name="youtube" component={renderTextField} label={formatMessage({id:"youtube"})}/>
-                        <Field name="link" component={renderTextField} label={formatMessage({id:"link"})}/>
-                    </CardText>
-                </Card>
-            </MuiThemeProvider>
-        </div>
-    );
-};

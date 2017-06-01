@@ -33,3 +33,8 @@ export const getIzit = key => {
     let url = BASE_URL + "/isit?token=" +key;
     return axios.get(url);
 };
+
+export const getPreview = link => {
+    let url = BASE_URL + "/linkData?link=" + link;
+    return axios.get(url);
+};
