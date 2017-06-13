@@ -39,7 +39,9 @@ class Preview extends React.Component {
         return(
             <div className="preview">
                 <div>
-                    <img src={this.state.preview.image} className="prev-image" alt="What up, yo?"/>
+                    <div className="prev-image-wrapper">
+                        <img src={this.state.preview.image} className="prev-image" alt="What up, yo?"/>
+                    </div>
                     <div className="prev-data">
                         <div className="title">{this.state.preview.title}</div>
                         <div className="description">{this.state.preview.description}</div>

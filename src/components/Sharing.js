@@ -2,7 +2,9 @@ import React from 'react';
 import {
     ShareButtons,
     generateShareIcon
-} from 'react-share';
+} from 'react-share'
+import {injectIntl} from 'react-intl';
+
 import {BASE_URL, LOGO_URL} from '../utils/Constants'
 
 const {
@@ -18,6 +20,10 @@ const WhatsappIcon = generateShareIcon('whatsapp');
 
 class Sharing extends React.Component {
 
+    constructor(props){
+        super(props);
+        this.formatMessage = props.intl.formatMessage;
+    }
     currentLoc = () => BASE_URL + this.props.loc.pathname;
 
     render () {
@@ -41,7 +47,8 @@ class Sharing extends React.Component {
                 <div className="share-item">
                     <WhatsappShareButton
                         url={this.currentLoc()}
-                        separator=":: ">
+                        title={this.formatMessage({id:'whatsappSharingTitle'})}
+                        separator=" - ">
                         <WhatsappIcon size={32} round />
                     </WhatsappShareButton>
                 </div>
@@ -52,4 +59,4 @@ class Sharing extends React.Component {
     }
 }
 
-export default Sharing;
+export default injectIntl(Sharing);
