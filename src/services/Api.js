@@ -2,9 +2,9 @@ import moment from 'moment';
 import axios from 'axios';
 
 //const BASE_URL = "http://izit.io";
-const BASE_URL = "http://130.119.61.122:8080";
+const BASE_URL = "http://192.168.1.40:8080";
 
-let getFixedDate = function (whenH, whenD) {
+let getFixedDate = function(whenH, whenD) {
     let momentTime = moment(whenH);
     let momentDate = moment(whenD);
     return moment({
@@ -19,18 +19,18 @@ let getFixedDate = function (whenH, whenD) {
 export const createIzit = inputs => {
     let appointmentMoment = getFixedDate(inputs.whenH, inputs.whenD);
     return axios.post(
-        BASE_URL+"/isit",
-        {
+        BASE_URL + "/isit", {
             what: inputs.what,
             when: appointmentMoment.valueOf(),
             youtube: inputs.youtube,
             email: inputs.email,
-            link: inputs.link}
+            link: inputs.link
+        }
     );
 };
 
 export const getIzit = key => {
-    let url = BASE_URL + "/isit?token=" +key;
+    let url = BASE_URL + "/isit?token=" + key;
     return axios.get(url);
 };
 
