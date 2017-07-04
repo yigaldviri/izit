@@ -3,7 +3,6 @@ import TimePicker from 'material-ui/TimePicker';
 import DatePicker from 'material-ui/DatePicker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField'
-import {Field} from 'redux-form'
 import {izitMuiTheme} from './themeProvider';
 import {FormattedMessage} from 'react-intl';
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { reducer as reduxFormReducer } from 'redux-form'
 import { createStore, combineReducers } from 'redux';
-import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 import {FormattedMessage} from 'react-intl';
 import DocumentMeta from 'react-document-meta';
 
@@ -29,6 +29,10 @@ const ErrorPanel = (props)=> {
     )
 };
 
+const Design = (props) => <Provider store={store}><IzItForm onError={props.route.onError}/></Provider>;
+const Published = (props) => <div><Izit token={props.params.token}/></div>;
+const AboutPage = (props) => <div><About/></div>;
+const NotFound = () => <Nowhere/>;
 
 class App extends Component {
 
@@ -100,10 +104,5 @@ class App extends Component {
         );
     }
 }
-
-const Design = (props) => <Provider store={store}><IzItForm onError={props.route.onError}/></Provider>;
-const Published = (props) => <div><Izit token={props.params.token}/></div>;
-const AboutPage = (props) => <div><About/></div>;
-const NotFound = () => <Nowhere/>;
 
 export default App;

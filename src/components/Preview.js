@@ -39,16 +39,16 @@ class Preview extends React.Component {
 
         return ( 
             <div className="preview-wrapper">
-                <div dir="ltr" className = "preview" >
-                    <div className = "prev-image-wrapper" >
+                <div dir="ltr" className="preview" >
+                    <div className="prev-image-wrapper" >
                         <img 
-                            src = { this.state.preview.image ? this.state.preview.image : yigal}
-                            className = "prev-image"
-                            alt = "What up, yo?" />
+                            src={ this.state.preview.image ? this.state.preview.image : yigal}
+                            className="prev-image"
+                            alt="What up, yo?" />
                     </div> 
-                    <div className = "prev-data">
-                        <div className = "title" > { this.state.preview.title } </div>
-                        <div className = "block-with-text" > { this.state.preview.description } </div>
+                    <div className="prev-data">
+                        <div className="title" > { this.state.preview.title } </div>
+                        <div className="block-with-text" > { this.state.preview.description } </div>
                     </div > 
                 </div >
             </div>

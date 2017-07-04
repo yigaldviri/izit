@@ -1,4 +1,4 @@
-import React , { Component } from 'react'
+import React from 'react'
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Field} from 'redux-form'

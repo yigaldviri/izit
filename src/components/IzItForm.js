@@ -1,9 +1,9 @@
-import React , { PropTypes, Component }    from 'react'
+import React , { Component }    from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { browserHistory } from 'react-router'
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import {Card} from 'material-ui/Card';
 import {injectIntl, FormattedMessage} from 'react-intl';
 
 import {createIzit} from '../services/Api';

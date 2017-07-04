@@ -11,6 +11,7 @@ import IzitTimer from './IzitTimer';
 import {getIzit} from '../services/Api';
 import {getTimerState, getTimeRemaining} from './IzitStates';
 import Sharing from './Sharing';
+import Preview from './Preview'
 
 
 const Phrase = ({izitState}) => {
@@ -95,6 +96,9 @@ class Izit extends React.Component {
                     }
                 </div>
 
+                {this.state.izit.url &&
+                    <Preview url={this.state.izit.url}/>
+                }
                 <Phrase izitState={this.state.izitState}/>
 
                 <MuiThemeProvider muiTheme={izitMuiTheme}>
