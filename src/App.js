@@ -24,7 +24,7 @@ const ErrorPanel = (props)=> {
     }
     return (
         <div className="error-panel">
-            <FormattedMessage id={props.error}/>
+            <FormattedMessage id={props.error.response.data.errorCode}/>
         </div>
     )
 };
@@ -42,7 +42,7 @@ class App extends Component {
     }
 
     handleError(error) {
-        this.setState({error : error ? error.message : null});
+        this.setState({error : error ? error : null});
     }
 
     goTo(where) {

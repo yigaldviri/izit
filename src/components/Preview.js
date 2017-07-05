@@ -1,12 +1,13 @@
 import React from "react";
 import { getPreview } from '../services/Api';
+import IzitLoader from './IzitLoader';
 import yigal from '../resources/yigal.jpg'
 
 class Preview extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {loading: false};
     }
 
     componentWillReceiveProps(nextProps) {
@@ -15,12 +16,17 @@ class Preview extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.getAPreview(this.props.url);
+    }
+
     getAPreview = url => {
         if (url) {
+            this.setState({loading:true});
             getPreview(url)
                 .then(
                     (res) => {
-                        this.setState({ preview: res.data });
+                        this.setState({ preview: res.data, loading:false });
                     }
                 )
                 .catch(
@@ -33,11 +39,15 @@ class Preview extends React.Component {
     };
 
     render() {
+        if (this.state.loading){
+            return (<IzitLoader loaderSize="30"/>);
+        }
+
         if (!this.state.preview) {
             return null;
         }
 
-        return ( 
+        return (
             <div className="preview-wrapper">
                 <div dir="ltr" className="preview" >
                     <div className="prev-image-wrapper" >

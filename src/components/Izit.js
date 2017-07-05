@@ -27,7 +27,7 @@ class Izit extends React.Component {
     constructor(props) {
         super(props);
         this.format = props.intl.formatMessage;
-        this.state = {loading: true, izit: "", time: 0, izitState: 0};
+        this.state = {loading: true, izit: {link: null}, time: 0, izitState: 0};
     }
 
     getIzitState(entTime, izitStatus) {
@@ -81,9 +81,6 @@ class Izit extends React.Component {
             <div className="context-wrapper izit-screen">
                 <DocumentMeta {...meta} extend/>
                 <div className="what">{this.state.izit.what}</div>
-                {/*<div className="what">iZit should go online</div>*/}
-
-
 
                 <div className="time-wrapper">
                     <IzitTimer time={this.state.time} izitState={this.state.izitState}/>
@@ -96,9 +93,7 @@ class Izit extends React.Component {
                     }
                 </div>
 
-                {this.state.izit.url &&
-                    <Preview url={this.state.izit.url}/>
-                }
+                <Preview url={this.state.izit.link}/>
                 <Phrase izitState={this.state.izitState}/>
 
                 <MuiThemeProvider muiTheme={izitMuiTheme}>

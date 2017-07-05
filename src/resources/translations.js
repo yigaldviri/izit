@@ -28,6 +28,7 @@ export const en = {
     statePhrase3: "Failed",
     whatsappSharingTitle: "wooooooooooooo",
     "Network Error": "Ammm. Seems like a network issue.",
+    "ISIT_ALREADY_EXISTS": "Ammm. Seems like there's already an izit with that title.",
     "error.what_contains_xss":"No way Jose",
     "error.invalid_email":"Invalid email address",
     "error.field_required":"Come on, fill the damn field"
@@ -64,6 +65,7 @@ export const he = {
     statePhrase3: "עבר הזמן",
     whatsappSharingTitle: "עוד להיט מאילנית!",
     "Network Error": "בעיה ברשת. כפרה, אין לך אינטרנט או משהו כזה",
+    "ISIT_ALREADY_EXISTS": "איחרת. מישהו כבר יצר איזיט עם כזאת כותרת",
     "error.what_contains_xss":"כן בטח. יאללה סע",
     "error.invalid_email":"יש בעיה עם האימייל הזה",
     "error.field_required":"חובה למלא את השדה הזה"
