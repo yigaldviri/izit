@@ -22,10 +22,10 @@ const getTimeLeft = (endTime) => {
 
 export const getTimeRemaining = endTime => {
     let t = getTimeLeft(endTime);
-    let seconds = Math.abs(Math.floor((t / 1000) % 60));
-    let minutes = Math.abs(Math.floor((t / 1000 / 60) % 60));
-    let hours = Math.abs(Math.floor((t / (1000 * 60 * 60)) % 24));
-    let days = Math.abs(Math.floor(t / (1000 * 60 * 60 * 24)));
+    let seconds = Math.floor(Math.abs((t / 1000) % 60));
+    let minutes = Math.floor(Math.abs((t / 1000 / 60) % 60));
+    let hours = Math.floor(Math.abs((t / (1000 * 60 * 60)) % 24));
+    let days = Math.floor(Math.abs(t / (1000 * 60 * 60 * 24)));
     return {
         total: t,
         days: days,

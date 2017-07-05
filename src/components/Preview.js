@@ -26,12 +26,13 @@ class Preview extends React.Component {
             getPreview(url)
                 .then(
                     (res) => {
-                        this.setState({ preview: res.data, loading:false });
+                        this.setState({ preview: res.data, loading: false });
                     }
                 )
                 .catch(
                     (error) => {
                         //think of what I want here
+                        this.setState({loading: false});
                         console.log(error);
                     }
                 )

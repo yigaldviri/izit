@@ -91,9 +91,11 @@ class Izit extends React.Component {
                                 allowFullScreen/>
                     </div>
                     }
+
+                    <Preview url={this.state.izit.link}/>
+
                 </div>
 
-                <Preview url={this.state.izit.link}/>
                 <Phrase izitState={this.state.izitState}/>
 
                 <MuiThemeProvider muiTheme={izitMuiTheme}>
