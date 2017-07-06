@@ -29,6 +29,7 @@ export const en = {
     whatsappSharingTitle: "wooooooooooooo",
     "Network Error": "Ammm. Seems like a network issue.",
     "ISIT_ALREADY_EXISTS": "Ammm. Seems like there's already an izit with that title.",
+    "ISIT_CANNOT_BE_EMPTY": "Can't do it without a title.",
     "error.what_contains_xss":"No way Jose",
     "error.invalid_email":"Invalid email address",
     "error.field_required":"Come on, fill the damn field"
@@ -66,6 +67,7 @@ export const he = {
     whatsappSharingTitle: "עוד להיט מאילנית!",
     "Network Error": "בעיה ברשת. כפרה, אין לך אינטרנט או משהו כזה",
     "ISIT_ALREADY_EXISTS": "איחרת. מישהו כבר יצר איזיט עם כזאת כותרת",
+    "ISIT_CANNOT_BE_EMPTY": "סורי, אי אפשר בלי כותרת",
     "error.what_contains_xss":"כן בטח. יאללה סע",
     "error.invalid_email":"יש בעיה עם האימייל הזה",
     "error.field_required":"חובה למלא את השדה הזה"

@@ -3,6 +3,7 @@ import {Card, CardHeader, CardText} from 'material-ui/Card';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Field} from 'redux-form'
 import {injectIntl} from 'react-intl';
+import { debounce } from 'throttle-debounce'
 
 import {renderTextField} from './Fields'
 import Preview from './Preview'
@@ -13,6 +14,11 @@ class OptionalCard extends React.Component{
         super(props);
         this.formatMessage = props.intl.formatMessage;
         this.state = {};
+        this.updatePreview = debounce(1200, this.updatePreview);
+    }
+
+    updatePreview(value){
+        this.setState({previewUrl: value});
     }
 
     render () {
@@ -33,7 +39,7 @@ class OptionalCard extends React.Component{
                             <Field name="link"
                                    component={renderTextField}
                                    onChange={(event, value) => {
-                                       this.setState({previewUrl: value});
+                                       this.updatePreview(value)
                                    }}
                                    label={this.formatMessage({id: "link"})}/>
                             <Preview url={this.state.previewUrl}/>
