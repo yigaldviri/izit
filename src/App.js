@@ -4,7 +4,6 @@ import { reducer as reduxFormReducer } from 'redux-form'
 import { createStore, combineReducers } from 'redux';
 import { Router, Route, browserHistory } from 'react-router'
 import {FormattedMessage} from 'react-intl';
-import DocumentMeta from 'react-document-meta';
 
 import './App.css';
 import logo from './resources/logo.png'
@@ -24,7 +23,7 @@ const ErrorPanel = (props)=> {
     }
     return (
         <div className="error-panel">
-            <FormattedMessage id={props.error.response.data.errorCode}/>
+            <FormattedMessage id={props.error}/>
         </div>
     )
 };
@@ -50,37 +49,8 @@ class App extends Component {
     }
 
     render() {
-
-        const meta = {
-            title: 'iZit.io',
-            description: document.location.href,
-            meta: {
-                charset: 'utf-8',
-                name: {
-                    keywords: 'izit,izit.io,rivi'
-                },
-                itemProp: {
-                    name: 'izit.io',
-                    description: document.location.href,
-                    image: 'https://github.com/yigaldviri/izit/blob/master/src/resources/logo-full-small.jpg'
-                },
-                property: {
-                    'og:title': 'iZit.io',
-                    'og:url': document.location.href,
-                    'og:type': 'article',
-                    'og:image': 'https://github.com/yigaldviri/izit/blob/master/src/resources/logo-full-small.jpg',
-                    'og:site_name': 'iZit.io',
-                    'twitter:title': 'I am a Twitter title'
-                }
-            },
-            auto: {
-                ograph: true
-            }
-        };
-
         return (
             <div className="App">
-                <DocumentMeta {...meta} />
                 <div className="App-content">
                     <div className="App-header">
                         <div>

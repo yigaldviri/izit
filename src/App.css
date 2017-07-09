@@ -149,7 +149,6 @@
 
 .youtube-panel {
     margin: 2%;
-    max-width: 50%;
     display: inline-block;
 }
 
@@ -271,14 +270,14 @@
 }
 
 .preview .prev-image {
-    width: 80px;
-    height: 50px;
+    width: 85px;
+    height: 65px;
     padding: 5px;
 }
 
 .preview .prev-data {
     text-align: left;
-    padding: 5px 0;
+    padding: 5px;
     flex-direction: column;
 }
 
@@ -290,6 +289,8 @@
     text-overflow: ellipsis;
     color: #004d40;
     padding: 5px 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -309,23 +310,7 @@
     max-height: 2.4em;
     /* If the last visible word doesn't adjoin right side then this will fix the problem */
     text-align: justify !important;
-    /* place for '...' */
-    padding-right: 40px;
 }
-
-
-/* create the ... */
-
-.block-with-text:before {
-    /* points in the end */
-    content: '...';
-    /* absolute position */
-    position: absolute;
-    /* set position to right bottom corner of block */
-    right: 20px;
-    bottom: 0;
-}
-
 
 /* hide ... if we have text, which is less than or equal to max lines */
 

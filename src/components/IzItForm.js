@@ -53,7 +53,7 @@ class IzItForm extends Component {
                                             <Field name="what"
                                                    component={renderTextField}
                                                    label={this.format({id:"what"})}/>
-                                            <div className="fields-description">{this.format({id:"whatDesc"})}</div>
+                                            {/*<div className="fields-description">{this.format({id:"whatDesc"})}</div>*/}
                                         </div>
                                         <div>
                                             <Field name="whenD" component={renderDateField} label={this.format({id:"whenD"})}/>
