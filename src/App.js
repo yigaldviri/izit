@@ -68,7 +68,7 @@ class App extends Component {
                 </div>
                 <div className="footer">
                     <div onClick={() => this.goTo("/ext/about")}>© 2017 iZit.io | About</div>
-                    <div style={{fontSize: 5}}>I Hate I18N</div>
+                    <div style={{fontSize: 1}}>I Hate I18N</div>
                 </div>
             </div>
         );
