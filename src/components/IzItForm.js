@@ -33,7 +33,7 @@ class IzItForm extends Component {
             })
             .catch((error) => {
                 this.setState({loading: false});
-                this.props.onError(error);
+                this.props.onError(error.message);
             });
     };
 

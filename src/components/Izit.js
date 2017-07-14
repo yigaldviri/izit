@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { browserHistory } from 'react-router'
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {injectIntl, FormattedMessage} from 'react-intl';
@@ -47,6 +48,10 @@ class Izit extends React.Component {
     componentDidMount() {
         getIzit(this.props.token)
             .then ((res) => {
+
+                if (!res.data.what){ // izit doesn't exist.
+                    browserHistory.push("/go/to/nowhere");
+                }
                 this.setTimer(res.data.when, res.data.status);
                 this.setState({
                     loading: false,
@@ -54,10 +59,12 @@ class Izit extends React.Component {
                 });
             })
             .catch((error) => {
-                this.setState({loading: false});
+                // this.setState({loading: false});
                 // go to 404 . with the error?
+                // this.setTimer(null, null);
 
-                this.setTimer(null, null);
+                // not sure this is the right behaviour
+                browserHistory.push("/go/to/nowhere");
             });
     }
 
