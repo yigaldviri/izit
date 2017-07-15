@@ -30,7 +30,7 @@ class About extends React.Component {
 
                 <div className="content">We are 2 programmers - Yonatan and I, Yigal.</div>
                 <div className="content">
-                    Actually Yoantan was my manager 4 years ago as I made my first steps in the software world. In some way, this is sort fo my graduation project.
+                    Actually Yonatan was my manager 4 years ago as I made my first steps in the software world. In some way, this is sort fo my graduation project.
                 </div>
                 <div className="content">
                     A few weeks ago, I read about some politician who made a ridiculous promise in the newspaper. I thought it would be nice to put his promise online in a way he won't be able to forget about it - as politicians often tend to.
@@ -62,8 +62,8 @@ class About extends React.Component {
                     </a>
                 </div>
                 <div className="about-member-content">
-                is a tech lead in AOL after he ran the R&D in Proonto and my team in Nolio (acquired by CA).
-                It doesn't matter in what fields he have experience in because he's 2 days away from knowing any technology - seriously, I have seen him in action.
+                is a team leader at Imperva. In the past, he ran the R&D of Proonto and led my team in Nolio (acquired by CA).
+                It doesn't matter in what fields he has experience in because he's 2 days away from knowing any technology - seriously, I have seen him in action.
                 </div>
                 <div className="content about-member">
                     <MemberAvatar logo={rachel} link="https://github.com/yigaldviri"/>
@@ -77,7 +77,7 @@ class About extends React.Component {
                 </div>
                 <div className="about-member-content">
                     who volunteered by force to be this site's designer, which can be pretty hard since I drove her mad with my desires.
-                    She's a very talented designer and I believe this site could have been a lot prettier if I would have just let here do here job quietly.
+                    She's a very talented designer and I believe this site could have been a lot prettier if I would have just let her do her job quietly.
                 </div>
 
                 <div className="content about-member" style={{marginTop: "50px"}}>And me, </div>

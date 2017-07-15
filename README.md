@@ -6,9 +6,11 @@ Create a web page with a timer to your event.
 
 ## Installing / Getting started
 
-This is the UI part (build with React), the server side is not publishe dfor security reasons.
+This is the UI part (build with React), the server side is not published due to security reasons.
 
 ### Dev mode  
+
+Install and download node v6 or above.
 
 ```shell
 git clone https://github.com/yigaldviri/izit.git
