@@ -52,8 +52,8 @@ class About extends React.Component {
                 <div className="content">Hence, another online rubbish.</div>
 
                 <div className="content about-member">
-                    <MemberAvatar logo={yonatan} link="https://github.com/yigaldviri"/>
-                    <a href="https://cddirector.io" target="blank" className="name-and-nick">
+                    <MemberAvatar logo={yonatan} link="https://www.linkedin.com/in/yonatan-katz-a07b562/"/>
+                    <a href="https://www.linkedin.com/in/yonatan-katz-a07b562/" target="blank" className="name-and-nick">
                         <span className="name">
                             Yonatan
                                 <i> "I'm a software engineer - I can do anything" </i>
