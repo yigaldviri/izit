@@ -92,7 +92,11 @@ class Izit extends React.Component {
                     </div>
                     }
 
-                    <Preview url={this.state.izit.link}/>
+                    {this.state.izit.link &&
+                    <a href={this.state.izit.link} style={{textDecoration: "none"}}>
+                        <Preview url={this.state.izit.link}/>
+                    </a>
+                    }
 
                 </div>
 

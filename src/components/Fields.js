@@ -27,7 +27,6 @@ export const renderTimeField = ({ input, label, meta: { touched, error }, ...cus
                         input.onChange(value)
                     }}
                     {...custom}
-                    format="24hr"
                     autoOk={true}
                     fullWidth={true}/>
     </MuiThemeProvider>
@@ -48,6 +47,7 @@ export const renderDateField = ({ input, label, meta: { touched, error }, ...cus
                         year: 'numeric',
                     }).format}
                     {...custom}
+                    minDate={new Date()}
                     autoOk={true}
                     fullWidth={true}/>
     </MuiThemeProvider>

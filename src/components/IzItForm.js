@@ -53,7 +53,6 @@ class IzItForm extends Component {
                                             <Field name="what"
                                                    component={renderTextField}
                                                    label={this.format({id:"what"})}/>
-                                            {/*<div className="fields-description">{this.format({id:"whatDesc"})}</div>*/}
                                         </div>
                                         <div>
                                             <Field name="whenD" component={renderDateField} label={this.format({id:"whenD"})}/>
@@ -69,7 +68,7 @@ class IzItForm extends Component {
                                         <div className="sub-button">
                                             <MuiThemeProvider muiTheme={izitMuiTheme}>
                                                 <RaisedButton primary={true} type="submit" buttonStyle={{color: "white"}}
-                                                              disabled={this.props.pristine || this.props.submitting}>
+                                                              disabled={this.props.pristine || this.props.submitting || this.state.loading}>
                                                     <FormattedMessage id="submitButton"/>
                                                 </RaisedButton>
                                             </MuiThemeProvider>
