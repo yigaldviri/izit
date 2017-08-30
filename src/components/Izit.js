@@ -87,7 +87,7 @@ class Izit extends React.Component {
 
                     {this.state.izit.youtube &&
                     <div className="youtube-panel">
-                        <iframe src={this.state.izit.youtube.replace("watch?v=", "embed/") + "?autoplay=1"}
+                        <iframe src={this.state.izit.youtube.replace("watch?v=", "embed/")}
                                 allowFullScreen/>
                     </div>
                     }

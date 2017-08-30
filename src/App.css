@@ -21,7 +21,6 @@
 }
 
 .Izit-description {
-    display: inline;
     font-family: cour;
     font-size: 1.5vw;
     margin-top: 1%;
@@ -377,9 +376,6 @@
     /* Styles for screen with max width of 600px */
     .Izit-title {
         width: 30vw;
-    }
-    .Izit-description {
-        width: 5vw;
     }
     .what {
         font-size: 35px; //fallback

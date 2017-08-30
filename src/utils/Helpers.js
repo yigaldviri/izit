@@ -1,6 +1,6 @@
 export const validate = values => {
     const errors = {};
-    const requiredFields = [];//['what', 'email', 'whenH', 'whenD'];
+    const requiredFields = ['what', 'email', 'whenH', 'whenD'];
     requiredFields.forEach(field => {
         if (!values[ field ]) {
             errors[ field ] = 'error.field_required';

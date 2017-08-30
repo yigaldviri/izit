@@ -56,7 +56,8 @@ class App extends Component {
                         <div>
                             {<img src={logo} className="Izit-title" onClick={() => this.goTo("/")} alt="iZit.io"/>}
                         </div>
-                        <div className="Izit-description">It's the final countdown. Ti di di di. Ti di di di di.</div>
+                        <div className="Izit-description">It's the final countdown</div>
+                        <div className="Izit-description">Ti di di di. Ti di di di di</div>
                     </div>
                     <Router history={browserHistory}>
                         <Route path="/" component={Design} onError={this.handleError.bind(this)}/>
