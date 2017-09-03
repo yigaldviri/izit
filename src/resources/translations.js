@@ -32,7 +32,9 @@ export const en = {
     "ISIT_CANNOT_BE_EMPTY": "Can't do it without a title.",
     "error.what_contains_xss":"No way Jose",
     "error.invalid_email":"Invalid email address",
-    "error.field_required":"Come on, fill the damn field"
+    "error.field_required":"Come on, fill the damn field",
+    "admin-change-state":"You have asked to change the status of the iZit to 'DONE' - Are you sure?",
+    "admin-change-button":"Yes, change it."
 };
 
 
@@ -70,5 +72,7 @@ export const he = {
     "ISIT_CANNOT_BE_EMPTY": "סורי, אי אפשר בלי כותרת",
     "error.what_contains_xss":"כן בטח. יאללה סע",
     "error.invalid_email":"יש בעיה עם האימייל הזה",
-    "error.field_required":"חובה למלא את השדה הזה"
+    "error.field_required":"חובה למלא את השדה הזה",
+    "admin-change-state":"ביקשת לשנות את הסטטוס של האיזיט הזה ל,בוצע, - האם לעשות זאת?",
+    "admin-change-button":"כן"
 };

@@ -11,7 +11,9 @@ import IzitTimer from './IzitTimer';
 import {getIzit} from '../services/Api';
 import {getTimerState, getTimeRemaining} from './IzitStates';
 import Sharing from './Sharing';
-import Preview from './Preview'
+import Preview from './Preview';
+import AdminView from './AdminView';
+
 
 
 const Phrase = ({izitState}) => {
@@ -77,7 +79,11 @@ class Izit extends React.Component {
         if (this.state.loading){
             return (<IzitLoader/>);
         }
-
+        
+         if (this.state.izit.admin){
+            return (<AdminView izit={this.state.izit}/>);
+        }
+        
         return(
             <div className="context-wrapper izit-screen">
                 <div className="what">{this.state.izit.what}</div>

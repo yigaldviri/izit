@@ -1,8 +1,8 @@
 import moment from 'moment';
 import axios from 'axios';
 
-//const BASE_URL = "http://localhost:8080";
-const BASE_URL = "./";
+const BASE_URL = "http://192.168.1.21:8080";
+//const BASE_URL = "./";
 
 let getFixedDate = function(whenH, whenD) {
     let momentTime = moment(whenH);
@@ -37,4 +37,9 @@ export const getIzit = key => {
 export const getPreview = link => {
     let url = BASE_URL + "/linkData?link=" + link;
     return axios.get(url);
+};
+
+export const changeIzitStatus = link => {
+    let url = BASE_URL + "/linkData?link=" + link;
+    return axios.put(url);
 };
