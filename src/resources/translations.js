@@ -33,8 +33,9 @@ export const en = {
     "error.what_contains_xss":"No way Jose",
     "error.invalid_email":"Invalid email address",
     "error.field_required":"Come on, fill the damn field",
-    "admin-change-state":"You have asked to change the status of the iZit to 'DONE' - Are you sure?",
-    "admin-change-button":"Yes, change it."
+    "admin-change-state":"You have asked to change the status of this iZit to DONE - Are you sure?",
+    "admin-change-button":"Yes, change it",
+    "admin-change-button-cancel": "No"
 };
 
 
@@ -73,6 +74,7 @@ export const he = {
     "error.what_contains_xss":"כן בטח. יאללה סע",
     "error.invalid_email":"יש בעיה עם האימייל הזה",
     "error.field_required":"חובה למלא את השדה הזה",
-    "admin-change-state":"ביקשת לשנות את הסטטוס של האיזיט הזה ל,בוצע, - האם לעשות זאת?",
-    "admin-change-button":"כן"
+    "admin-change-state":"ביקשת לשנות את הסטטוס של האיזיט הזה ל'בוצע' - האם לעשות זאת?",
+    "admin-change-button":"כן",
+    "admin-change-button-cancel":"לא"
 };

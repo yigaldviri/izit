@@ -79,14 +79,16 @@ class Izit extends React.Component {
         if (this.state.loading){
             return (<IzitLoader/>);
         }
-        
-         if (this.state.izit.admin){
-            return (<AdminView izit={this.state.izit}/>);
-        }
+        let query = this.context.router.location.query;
         
         return(
             <div className="context-wrapper izit-screen">
                 <div className="what">{this.state.izit.what}</div>
+
+                {
+                    Object.getOwnPropertyNames(query).length !== 0 && 
+                    <AdminView izit={this.state.izit} queryKey={query.key}/>
+                } 
 
                 <div className="time-wrapper">
                     <IzitTimer time={this.state.time} izitState={this.state.izitState}/>

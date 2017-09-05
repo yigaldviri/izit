@@ -14,34 +14,44 @@ class AdminView extends React.Component {
         this.format = props.intl.formatMessage;
     }
 
-    changeStatus() {
-        changeIzitStatus()
+    changeStatus = () => {
+        let urlToken = this.props.izit.urlToken, key = this.props.queryKey;
+        
+        changeIzitStatus(urlToken, key, 'DONE')
             .then ((res) => {
-
                 if (!res.data.what){ // izit doesn't exist.
                     browserHistory.push("/go/to/nowhere");
                 }
                 else {
                     browserHistory.push(this.props.izit.urlToken);
-                    //browserHistory.push(res.data.urlToken);
+                    window.location.reload();
                 }
             })
-    }
+    };
     
     render() {
         return (
-            <div className="context-wrapper izit-screen">
-                <div className="what">{this.props.izit.what}</div>
-                <div>
+            <div style={{margin: '20px'}}>
+                <div style={{color: 'red'}}>
                     <FormattedMessage id="admin-change-state"/>
                 </div>
-                <MuiThemeProvider muiTheme={izitMuiTheme}>
-                    <RaisedButton
-                        label={this.format({id: "admin-change-button"})}
-                        className="sub-button" primary={true}
-                        onClick={this.changeStatus}>
-                    </RaisedButton>
-                </MuiThemeProvider>
+                <div>
+                    <MuiThemeProvider muiTheme={izitMuiTheme}>
+                        <RaisedButton
+                            label={this.format({id: "admin-change-button-cancel"})}
+                            className="admin-button" primary={true}
+                            onClick={() => browserHistory.push(this.props.izit.urlToken)}>
+                        </RaisedButton>
+                    </MuiThemeProvider>
+                    
+                    <MuiThemeProvider muiTheme={izitMuiTheme}>
+                        <RaisedButton
+                            label={this.format({id: "admin-change-button"})}
+                            className="admin-button" primary={true}
+                            onClick={this.changeStatus}>
+                        </RaisedButton>
+                    </MuiThemeProvider>
+                </div>
             </div>
         )
     }

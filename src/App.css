@@ -53,6 +53,10 @@
     margin-top: 20px;
 }
 
+.admin-button {
+    margin: 5px 5px;
+}
+
 .nowhere {
     font-family: open-sans-heb-light;
     padding: 1em 1em;

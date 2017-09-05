@@ -39,7 +39,7 @@ export const getPreview = link => {
     return axios.get(url);
 };
 
-export const changeIzitStatus = link => {
-    let url = BASE_URL + "/linkData?link=" + link;
+export const changeIzitStatus = (urlToken, key, status) => {
+    let url = BASE_URL + "/isit?token=" + urlToken + "&key=" + key + "&status=" +status;
     return axios.put(url);
 };
