@@ -1,8 +1,8 @@
 import moment from 'moment';
 import axios from 'axios';
 
-const BASE_URL = "http://192.168.1.21:8080";
-//const BASE_URL = "./";
+//const BASE_URL = "http://192.168.1.21:8080";
+const BASE_URL = "./";
 
 let getFixedDate = function(whenH, whenD) {
     let momentTime = moment(whenH);
