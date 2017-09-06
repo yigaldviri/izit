@@ -124,7 +124,7 @@
 
 .digits-wrapper {
     background: #004d40;
-    padding: 10px;
+    padding: 8px;
 }
 
 .digits-overtime {
@@ -380,6 +380,10 @@
     /* Styles for screen with max width of 600px */
     .Izit-title {
         width: 30vw;
+    }
+    .Izit-description {
+        font-size: 15px;
+        font-size: 3.3vw;
     }
     .what {
         font-size: 35px; //fallback

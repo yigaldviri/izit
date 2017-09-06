@@ -10,8 +10,8 @@ export const IzitState =
 
 export const IzitStatus =
     Object.freeze({
-            DONE: 0,
-            NOT_DONE: 1
+            DONE: "DONE",
+            NOT_DONE: "NOT_DONE"
         }
     );
 
