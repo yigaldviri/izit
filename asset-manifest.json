@@ -1,0 +1,17 @@
+{
+  "main.css": "static/css/main.css",
+  "main.css.map": "static/css/main.css.map",
+  "main.js": "static/js/main.js",
+  "main.js.map": "static/js/main.js.map",
+  "static/media/COUR.TTF": "static/media/COUR.TTF",
+  "static/media/COURBD.TTF": "static/media/COURBD.TTF",
+  "static/media/GOTHICB.TTF": "static/media/GOTHICB.TTF",
+  "static/media/OPENSANSHEBREW-LIGHT.TTF": "static/media/OPENSANSHEBREW-LIGHT.TTF",
+  "static/media/REFORMAREGULAR.TTF": "static/media/REFORMAREGULAR.TTF",
+  "static/media/digital-7.ttf": "static/media/digital-7.ttf",
+  "static/media/now.gif": "static/media/now.gif",
+  "static/media/nowhere.gif": "static/media/nowhere.gif",
+  "static/media/rachel.jpg": "static/media/rachel.jpg",
+  "static/media/yigal.jpg": "static/media/yigal.jpg",
+  "static/media/yonatan.jpg": "static/media/yonatan.jpg"
+}
