@@ -53,9 +53,25 @@
     margin-top: 20px;
 }
 
-.admin-button {
-    margin: 5px 5px;
+.admin-view{
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
 }
+
+.admin-title {
+    color: #d3002d;
+    font-size: 2vw;    
+}
+
+.admin-button {
+    margin: 10px 20px;
+}
+
+.admin-button-icon {
+    color: white;
+    position: relative;
+    bottom: -5px;}
 
 .nowhere {
     font-family: open-sans-heb-light;
@@ -407,5 +423,8 @@
     }
     .preview .title {
         max-width: 190px;
+    }
+    .admin-title {
+        font-size: 3.5vw;
     }
 }

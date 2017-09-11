@@ -5,7 +5,7 @@ import {
 } from 'react-share'
 import {injectIntl} from 'react-intl';
 
-import {BASE_URL, LOGO_URL} from '../utils/Constants'
+import {BASE_URL} from '../utils/Constants'
 
 const {
     FacebookShareButton,
@@ -37,8 +37,7 @@ class Sharing extends React.Component {
                 <div className="share-item">
                     <FacebookShareButton
                         url={this.currentLoc()}
-                        title={this.currentLoc()}
-                        picture={LOGO_URL}>
+                        qoute={this.currentLoc()}>
                         <FacebookIcon size={32} round />
                     </FacebookShareButton>
                 </div>

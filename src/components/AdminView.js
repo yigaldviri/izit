@@ -31,24 +31,28 @@ class AdminView extends React.Component {
     
     render() {
         return (
-            <div style={{margin: '20px'}}>
-                <div style={{color: 'red'}}>
+            <div className="admin-view">
+                <div className="admin-title">
                     <FormattedMessage id="admin-change-state"/>
                 </div>
                 <div>
                     <MuiThemeProvider muiTheme={izitMuiTheme}>
                         <RaisedButton
-                            label={this.format({id: "admin-change-button-cancel"})}
                             className="admin-button" primary={true}
                             onClick={() => browserHistory.push(this.props.izit.urlToken)}>
+                            <span className="admin-button-icon" style={{bottom: "-6px"}}>
+                                <i className="material-icons">clear</i>
+                            </span>
                         </RaisedButton>
                     </MuiThemeProvider>
                     
                     <MuiThemeProvider muiTheme={izitMuiTheme}>
                         <RaisedButton
-                            label={this.format({id: "admin-change-button"})}
                             className="admin-button" primary={true}
                             onClick={this.changeStatus}>
+                            <span className="admin-button-icon">
+                                <i className="material-icons">done</i>
+                            </span>
                         </RaisedButton>
                     </MuiThemeProvider>
                 </div>

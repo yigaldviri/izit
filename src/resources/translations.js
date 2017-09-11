@@ -1,6 +1,6 @@
 export const en = {
     rivi:"ריבי",
-    description:"Give as a title and time and we will generate a countdown timer for you",
+    description:"Give us a title, give us a time. We will give you a countdown , this is a rhyme.",
     submitButton: "Go",
     what: "What should happen?",
     whatDesc: "something something something",
@@ -33,8 +33,8 @@ export const en = {
     "error.what_contains_xss":"No way Jose",
     "error.invalid_email":"Invalid email address",
     "error.field_required":"Come on, fill the damn field",
-    "admin-change-state":"You have asked to change the status of this iZit to DONE - Are you sure?",
-    "admin-change-button":"Yes, change it",
+    "admin-change-state":"Are you sure you want to stop your timer?",
+    "admin-change-button":"Yes",
     "admin-change-button-cancel": "No"
 };
 
@@ -74,7 +74,7 @@ export const he = {
     "error.what_contains_xss":"כן בטח. יאללה סע",
     "error.invalid_email":"יש בעיה עם האימייל הזה",
     "error.field_required":"חובה למלא את השדה הזה",
-    "admin-change-state":"ביקשת לשנות את הסטטוס של האיזיט הזה ל'בוצע' - האם לעשות זאת?",
+    "admin-change-state":"האם לעצור את הטיימר?",
     "admin-change-button":"כן",
     "admin-change-button-cancel":"לא"
 };
