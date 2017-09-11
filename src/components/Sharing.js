@@ -24,7 +24,7 @@ class Sharing extends React.Component {
         super(props);
         this.formatMessage = props.intl.formatMessage;
     }
-    currentLoc = () => BASE_URL + this.props.loc.pathname;
+    currentLoc = () => decodeURI(BASE_URL + this.props.loc.pathname);
 
     render () {
         return(
