@@ -1,13 +1,13 @@
 export const en = {
     rivi:"ריבי",
-    description:"Give us a title, give us a time. We will give you a countdown , this is a rhyme.",
+    description:"Give us a title, give us a time. We will give you a countdown, this is a rhyme.",
     submitButton: "Go",
     what: "What should happen?",
     whatDesc: "something something something",
     whenD: "In which day?",
     whenH: "In what hour?",
     email: "E-mail",
-    emailDesc: "We promise not to spam the shit of you. will just send you a mail with your new page info",
+    emailDesc: "We promise not to spam the shit of you. wi'll just send you a mail with your new page info",
     youtube: "Youtube",
     youtubeDesc: "You don't have to",
     link: "Link",
@@ -41,7 +41,7 @@ export const en = {
 
 export const he = {
     rivi:"ריבי",
-    description:"תן כותרת, תאריך ושעה ואנחנו נייצר לך דף עם טיימר עד לרגע שבו זה אמור לקרות",
+    description:"תן כותרת, תאריך ושעה ואנחנו נייצר לך טיימר",
     submitButton: "יאללה",
     what: "מה אמור לקרות?",
     whatDesc: "אבל בצורה של שאלה. האם ביבי עדין ראש ממשלה?",
