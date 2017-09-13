@@ -30,25 +30,23 @@ class About extends React.Component {
 
                 <div className="content">We are 2 programmers - Yonatan and I, Yigal.</div>
                 <div className="content">
-                    Actually Yonatan was my manager 4 years ago as I made my first steps in the software world. In some way, this is sort fo my graduation project.
+                    Actually Yonatan was my manager 4 years ago as I was making my first steps in the world of software. You might say this is sort of a graduation project.
                 </div>
                 <div className="content">
-                    A few weeks ago, I read about some politician who made a ridiculous promise in the newspaper. I thought it would be nice to put his promise online in order that he won't be able to forget about it - as politicians often tend to.
+                    A few weeks ago, I read  in the newspaper about a politician who made a ridiculous promise. I thought it would be nice to post his promise online so he won't be able to forget about it - as politicians often tend to do.
                 </div>
                 <div className="content">
                     I told Yonatan about my idea and a day later he mailed me the entire server side. He left me no choice but to get into it and do my part - the UI.
                 </div>
 
                 <div className="content">One week later my father passed away.</div>
-
-                <div className="content">Thus, it took me some time to complete this, obviously, but eventually we finished it. </div>
-
-                <div className="content">This little project isn't because of my father, but as a result of him.</div>
+                
+                <div className="content">This side project isn't because of my father's passing, but as a result of how he was and how he raised me.</div>
 
                 <div className="content" style={{margin: 0}}>
-                    My parents never spared money when it came to education. It was important to my father (and of course my mother) that I will become well educated. So where other programmers might see a "yet another ordinary open source project" - I see the result of education.
+                    My parents never spared money when it came to my education. It was important to my father (and of course to my mother) that I will become a well educated person. So where other programmers might see a "yet another ordinary open source project" - I see the result of education.
                 </div>
-                <div className="content">A wise man once told me- "It doesn't matter what you post online- The fact you did so, is worth more than all of those who didn't.</div>
+                <div className="content">A wise man once told me- "It doesn't matter what you post online- The fact you did so, is worth more than all of those who didn't."</div>
                 <div className="content">Hence, another online rubbish.</div>
 
                 <div className="content about-member">
@@ -91,7 +89,7 @@ class About extends React.Component {
                         </span>
                     </a>
                 </div>
-                <div className="about-member-content" >  a simple man, as my dad was.</div>
+                <div className="about-member-content" >  a simple man, as was my dad.</div>
                 <div className="now-what">
                     <img src={now} style={{width : "100%", height : "60%"}} alt="What up, yo?"/>
                     <div className="now">Oh, now you can go back to <a href="/">the main page</a>.</div>

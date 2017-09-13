@@ -9,7 +9,7 @@ import {izitMuiTheme} from './themeProvider'
 import IzitLoader from './IzitLoader';
 import IzitTimer from './IzitTimer';
 import {getIzit} from '../services/Api';
-import {getTimerState, getTimeRemaining} from './IzitStates';
+import {getTimerState, getTimeRemaining, getInterval} from './IzitStates';
 import Sharing from './Sharing';
 import Preview from './Preview';
 import AdminView from './AdminView';
@@ -54,7 +54,18 @@ class Izit extends React.Component {
                 if (!res.data.what){ // izit doesn't exist.
                     browserHistory.push("/go/to/nowhere");
                 }
-                this.setTimer(res.data.when, res.data.status);
+                
+                if (res.data.done) {
+                    this.setState(
+                        {
+                            time: getInterval(res.data.done, res.data.when),
+                            izitState: getTimerState(res.data.when, res.data.status)
+                        }
+                    );
+                } else {
+                    this.setTimer(res.data.when, res.data.status);
+                }
+                
                 this.setState({
                     loading: false,
                     izit: res.data

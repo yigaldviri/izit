@@ -20,19 +20,26 @@ const getTimeLeft = (endTime) => {
     return endTime - Date.parse(new Date());
 };
 
-export const getTimeRemaining = endTime => {
-    let t = getTimeLeft(endTime);
-    let seconds = Math.floor(Math.abs((t / 1000) % 60));
-    let minutes = Math.floor(Math.abs((t / 1000 / 60) % 60));
-    let hours = Math.floor(Math.abs((t / (1000 * 60 * 60)) % 24));
-    let days = Math.floor(Math.abs(t / (1000 * 60 * 60 * 24)));
+const toDate = time => {
+    let seconds = Math.floor(Math.abs((time / 1000) % 60));
+    let minutes = Math.floor(Math.abs((time / 1000 / 60) % 60));
+    let hours = Math.floor(Math.abs((time / (1000 * 60 * 60)) % 24));
+    let days = Math.floor(Math.abs(time / (1000 * 60 * 60 * 24)));
     return {
-        total: t,
+        total: time,
         days: days,
         hours: hours,
         minutes: minutes,
         seconds: seconds
     };
+};
+
+export const getInterval = (from, to) => {
+    return toDate(to - from);
+};
+
+export const getTimeRemaining = endTime => {
+    return toDate(getTimeLeft(endTime));
 };
 
 const checkIfOverTime = (endTime) => {
