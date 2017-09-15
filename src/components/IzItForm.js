@@ -55,7 +55,7 @@ class IzItForm extends Component {
                                                    label={this.format({id:"what"})}/>
                                         </div>
                                         <div>
-                                            <Field name="whenD" component={renderDateField} label={this.format({id:"whenD"})}/>
+                                            <Field name="whenD" locale={this.locale} component={renderDateField} label={this.format({id:"whenD"})}/>
                                         </div>
                                         <div>
                                             <Field name="whenH" component={renderTimeField} label={this.format({id:"whenH"})}/>

@@ -33,7 +33,7 @@ export const renderTimeField = ({ input, label, meta: { touched, error }, ...cus
 );
 
 
-export const renderDateField = ({ input, label, meta: { touched, error }, ...custom }) => (
+export const renderDateField = ({locale, input, label, meta: { touched, error }, ...custom }) => (
     <MuiThemeProvider muiTheme={izitMuiTheme}>
         <DatePicker hintText={label}
                     floatingLabelText={label}
@@ -47,6 +47,7 @@ export const renderDateField = ({ input, label, meta: { touched, error }, ...cus
                         year: 'numeric',
                     }).format}
                     {...custom}
+                    firstDayOfWeek={locale === "en-IL" || locale === "he-IL" ? 0 : 1}
                     minDate={new Date()}
                     autoOk={true}
                     fullWidth={true}/>
